@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background"
+    >
+
+    <TextView
+        android:id="@+id/id_text_high4"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="High: 60"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_time4"
+        app:layout_constraintEnd_toStartOf="@+id/id_text_high5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/id_text_time4"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_time4" />
+
+    <TextView
+        android:id="@+id/id_text_time4"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
+        android:text="Time"
+        app:layout_constraintEnd_toStartOf="@+id/id_text_time5"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_date" />
+
+    <TextView
+        android:id="@+id/id_text_high1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="High: 60"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_time1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/id_text_time1"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_time1" />
+
+    <TextView
+        android:id="@+id/id_text_high2"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="High: 60"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_time2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/id_text_high1"
+        app:layout_constraintStart_toStartOf="@+id/id_text_time2"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_time2" />
+
+    <TextView
+        android:id="@+id/id_text_high5"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="High: 60"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_time5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/id_text_time5"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_time5" />
+
+    <TextView
+        android:id="@+id/id_text_high3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="High: 60"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_time3"
+        app:layout_constraintEnd_toStartOf="@+id/id_text_high4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/id_text_high2"
+        app:layout_constraintStart_toStartOf="@+id/id_text_time3"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_time3" />
+
+    <Button
+        android:id="@+id/id_getInfo"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="12dp"
+        android:text="GETINFO"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="176dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/id_text_enter"
+        app:layout_constraintEnd_toStartOf="@+id/id_getInfo"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toEndOf="@+id/id_text_enter"
+        app:layout_constraintTop_toTopOf="@+id/id_text_enter" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="159dp"
+        android:layout_height="78dp"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_quote2"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/id_text_quote2"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_current"
+        tools:srcCompat="@drawable/weather" />
+
+    <TextView
+        android:id="@+id/id_text_quote"
+        android:layout_width="350dp"
+        android:layout_height="22dp"
+        android:gravity="center"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_current"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/id_text_current"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/id_text_quote2"
+        android:layout_width="350dp"
+        android:layout_height="22dp"
+        android:gravity="center"
+        android:text="Weather Condition"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_date"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="@+id/id_text_date"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/id_text_date"
+        android:layout_width="350dp"
+        android:layout_height="22dp"
+        android:gravity="center"
+        android:text="Time"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_quote2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/id_text_quote2"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_quote2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="64dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_high1"
+        tools:srcCompat="@drawable/weather" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="64dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_high2"
+        tools:srcCompat="@drawable/weather" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="64dp"
+        android:layout_height="110dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_high3"
+        tools:srcCompat="@drawable/weather" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="64dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_high4"
+        tools:srcCompat="@drawable/weather" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="64dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_high5"
+        tools:srcCompat="@drawable/weather" />
+
+    <TextView
+        android:id="@+id/id_text_time1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:text="Time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_date" />
+
+    <TextView
+        android:id="@+id/id_text_time2"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="52dp"
+        android:text="Time"
+        app:layout_constraintStart_toEndOf="@+id/id_text_time1"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_date" />
+
+    <TextView
+        android:id="@+id/id_text_time3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Time"
+        app:layout_constraintEnd_toStartOf="@+id/id_text_time4"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toEndOf="@+id/id_text_time2"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_date" />
+
+    <TextView
+        android:id="@+id/id_text_time5"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:text="Time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_date" />
+
+    <TextView
+        android:id="@+id/id_text_low1"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:text="Low: 50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/id_text_low2"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:text="Low: 50"
+        app:layout_constraintStart_toEndOf="@+id/id_text_low1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/id_text_low3"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:text="Low: 50"
+        app:layout_constraintEnd_toStartOf="@+id/id_text_low4"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/id_text_low2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/id_text_low4"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="Low: 50"
+        app:layout_constraintEnd_toStartOf="@+id/id_text_low5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/id_text_low5"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="Low: 50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/id_text_enter"
+        android:layout_width="93dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:text="Enter Zipcode:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id_text_current"
+        android:layout_width="350dp"
+        android:layout_height="22dp"
+        android:gravity="center"
+        android:text="Temperature"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_quote"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="@+id/id_text_quote"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_quote" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

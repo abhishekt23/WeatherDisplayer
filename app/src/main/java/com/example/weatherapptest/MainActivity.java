@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 SimpleDateFormat sdf1 = new java.text.SimpleDateFormat("HH:mm z");
                 sdf1.setTimeZone(java.util.TimeZone.getTimeZone("EST"));
                 String formattedDate1 = sdf1.format(date1);
-                date0.setText(formattedDate1);
+                date0.setText(timeConvert(formattedDate1));
                 Log.d("object", unixSeconds1 + "");
                 Double temp = json2.getJSONObject("main").getDouble("temp");
                 currenttemp.setText(temp + "");
@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
                 SimpleDateFormat sdf2 = new java.text.SimpleDateFormat("HH:mm");
                 sdf2.setTimeZone(java.util.TimeZone.getTimeZone("EST"));
                 String formattedDate2 = sdf2.format(date2);
-                time1.setText(formattedDate2);
+                time1.setText(timeConvert(formattedDate2));
                 Double temp_min1 = json2.getJSONObject("main").getDouble("temp_min");
                 Double temp_max1 = json2.getJSONObject("main").getDouble("temp_max");
                 String info1 = json2.getJSONArray("weather").getJSONObject(0).getString("main");
@@ -196,6 +196,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("info2", temp_min1 + "");
                 Log.d("yes", info1);
                 Log.d("object1", unixSeconds2 + "");
+                Log.d("timeConvert", timeConvert(formattedDate2)+ "");
+
 
 
                 long unixSeconds3 = json.getJSONArray("list").getJSONObject(0).getLong("dt");
@@ -203,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
                 SimpleDateFormat sdf3 = new java.text.SimpleDateFormat("HH:mm");
                 sdf3.setTimeZone(java.util.TimeZone.getTimeZone("EST"));
                 String formattedDate3 = sdf3.format(date3);
-                time2.setText(formattedDate3);
+                time2.setText(timeConvert(formattedDate3));
                 Double temp_min2 = json.getJSONArray("list").getJSONObject(0).getJSONObject("main").getDouble("temp_min");
                 Double temp_max2 = json.getJSONArray("list").getJSONObject(0).getJSONObject("main").getDouble("temp_max");
                 String info2 = json.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("main");
@@ -218,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
                 SimpleDateFormat sdf4 = new java.text.SimpleDateFormat("HH:mm");
                 sdf4.setTimeZone(java.util.TimeZone.getTimeZone("EST"));
                 String formattedDate4 = sdf4.format(date4);
-                time3.setText(formattedDate4);
+                time3.setText(timeConvert(formattedDate4));
                 Double temp_min3 = json.getJSONArray("list").getJSONObject(1).getJSONObject("main").getDouble("temp_min");
                 Double temp_max3 = json.getJSONArray("list").getJSONObject(1).getJSONObject("main").getDouble("temp_max");
                 String info3 = json.getJSONArray("list").getJSONObject(1).getJSONArray("weather").getJSONObject(0).getString("main");
@@ -235,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
                 SimpleDateFormat sdf5 = new java.text.SimpleDateFormat("HH:mm");
                 sdf5.setTimeZone(java.util.TimeZone.getTimeZone("EST"));
                 String formattedDate5 = sdf5.format(date5);
-                time4.setText(formattedDate5);
+                time4.setText(timeConvert(formattedDate5));
                 Double temp_min4 = json.getJSONArray("list").getJSONObject(2).getJSONObject("main").getDouble("temp_min");
                 Double temp_max4 = json.getJSONArray("list").getJSONObject(2).getJSONObject("main").getDouble("temp_max");
                 String info4 = json.getJSONArray("list").getJSONObject(2).getJSONArray("weather").getJSONObject(0).getString("main");
@@ -250,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
                 SimpleDateFormat sdf6 = new java.text.SimpleDateFormat("HH:mm");
                 sdf6.setTimeZone(java.util.TimeZone.getTimeZone("EST"));
                 String formattedDate6 = sdf6.format(date6);
-                time5.setText(formattedDate6);
+                time5.setText(timeConvert(formattedDate6));
                 Double temp_min5 = json.getJSONArray("list").getJSONObject(3).getJSONObject("main").getDouble("temp_min");
                 Double temp_max5 = json.getJSONArray("list").getJSONObject(3).getJSONObject("main").getDouble("temp_max");
                 String info5 = json.getJSONArray("list").getJSONObject(3).getJSONArray("weather").getJSONObject(0).getString("main");
@@ -428,19 +430,19 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-       /* public String timeConvert(String time) {
-            String str = time.substring(11, 13);
+        public String timeConvert(String time) {
+            String str = time.substring(0, 2);
             int i = Integer.parseInt(str);
             if (i == 0)
-                return "12:00 AM";
+                return "12:00AM";
             if (i > 12)
-                return (i -= 12) + ":00 PM";
+                return (i -= 12) + ":00PM";
             else
-                return i + ":00 AM";
+                return i + ":00AM";
 
 
         }
-        */
+
 
     }
 }
